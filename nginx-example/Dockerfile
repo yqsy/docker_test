@@ -6,3 +6,4 @@ RUN apt-get update -y && apt-get install -y nginx
 RUN echo 'Hello yqsy' \
     > /usr/share/nginx/html/index.html
 EXPOSE 80
+ENTRYPOINT ["nginx", "-g", "daemon off;"]
